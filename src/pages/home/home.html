@@ -1,14 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Tu bosque
     </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="addArbol()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-card *ngFor="let item of items">
+        
+        <h2>Tipo: {{item.tipo}}</h2>
+        <h2>Ancho de copa: {{item.copa}}</h2>
+        <h2>Ancho de tronco: {{item.tronco}}</h2>
+        <h2>Geolocalizacion: {{item.latitud}}, {{item.longitud}}</h2>
+        <img src={{item.url}}>
+       </ion-card>
 </ion-content>
