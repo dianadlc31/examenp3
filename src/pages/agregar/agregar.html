@@ -6,20 +6,22 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Agregar</ion-title>
+    <ion-title style="text-align:center; background-color:#2E4052">
+      <h5 style="color: white">Agregar</h5>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style=" background-color:#BEE9E8">
 <ion-list>
   <ion-item>
     <ion-input type="text" placeholder="Tipo de árbol" [(ngModel)]="tipo"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="text" placeholder="Ancho de copa" [(ngModel)]="copa"></ion-input>
+    <ion-input type="text" placeholder="Ancho de copa (metros)" [(ngModel)]="copa"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="text" placeholder="Ancho de tronco" [(ngModel)]="tronco"></ion-input>
+    <ion-input type="text" placeholder="Ancho de tronco (metros)" [(ngModel)]="tronco"></ion-input>
   </ion-item>
   <ion-item>
     <button ion-button icon-only (click)= "getPicture()">

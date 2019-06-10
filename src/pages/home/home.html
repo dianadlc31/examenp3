@@ -1,7 +1,7 @@
-<ion-header>
+<ion-header style="background-color:#2E4052">
   <ion-navbar>
-    <ion-title>
-      Tu bosque
+    <ion-title style="text-align:center; background-color:#2E4052">
+      <h5 style="color: white">Tu bosque</h5>
     </ion-title>
     <ion-buttons end>
         <button ion-button icon-only (click)="addArbol()">
@@ -11,13 +11,13 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style=" background-color:#BEE9E8">
     <ion-card *ngFor="let item of items">
         
         <h2>Tipo: {{item.tipo}}</h2>
-        <h2>Ancho de copa: {{item.copa}}</h2>
-        <h2>Ancho de tronco: {{item.tronco}}</h2>
-        <h2>Geolocalizacion: {{item.latitud}}, {{item.longitud}}</h2>
+        <h2>Ancho de copa: {{item.copa}} m</h2>
+        <h2>Ancho de tronco: {{item.tronco}} m</h2>
+        <h2>Geolocalización: ({{item.latitud}}, {{item.longitud}})</h2>
         <img src={{item.url}}>
        </ion-card>
 </ion-content>
